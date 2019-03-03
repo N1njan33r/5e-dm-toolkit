@@ -18,5 +18,7 @@ namespace TestCall.Models
 
         [JsonProperty("desc")]
         public string[] Description { get; set; }
+
+        public School School { get; set; }
     }
 }
