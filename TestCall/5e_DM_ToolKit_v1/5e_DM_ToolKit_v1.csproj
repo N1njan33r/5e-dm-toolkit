@@ -142,7 +142,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Actions.cs" />
-    <Compile Include="Models\EncountersMonsters.cs" />
+    <Compile Include="Models\EncounterCreature.cs" />
     <Compile Include="Models\LegendaryActions.cs" />
     <Compile Include="Models\Monsters.cs" />
     <Compile Include="Models\School.cs" />
