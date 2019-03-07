@@ -24,5 +24,7 @@ namespace _5e_DM_ToolKit_v1.Models
         public string Charisma { get; set; }
 
 
+
+
     }
 }
