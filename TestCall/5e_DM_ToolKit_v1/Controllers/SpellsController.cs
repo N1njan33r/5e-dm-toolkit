@@ -14,6 +14,7 @@ namespace _5e_DM_ToolKit_v1.Controllers
         // GET: Spells
         public async Task<ActionResult> Index()
         {
+
             Spells spells = null;
             var client = new HttpClient();
             client.BaseAddress = new Uri("http://dnd5eapi.co/");
