@@ -136,12 +136,13 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MonstersController.cs" />
     <Compile Include="Controllers\SpellsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Actions.cs" />
-    <Compile Include="Models\EncountersMonsters.cs" />
+    <Compile Include="Models\EncounterCreature.cs" />
     <Compile Include="Models\LegendaryActions.cs" />
     <Compile Include="Models\Monsters.cs" />
     <Compile Include="Models\School.cs" />
@@ -187,6 +188,8 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Spells\Index.cshtml" />
+    <Content Include="Views\Monsters\Index.cshtml" />
+    <Content Include="Views\Home\Add.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
