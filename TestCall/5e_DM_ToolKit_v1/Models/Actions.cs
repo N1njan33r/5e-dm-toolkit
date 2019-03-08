@@ -17,6 +17,7 @@ namespace _5e_DM_ToolKit_v1.Models
         [DisplayName("Description")]
         public string Desc { get; set; }
         public string Name { get; set; }
-        public string MyProperty { get; set; }
-    }
+
+        public string URL { get; set; }
+    }  
 }
