@@ -152,7 +152,7 @@
     <Compile Include="Models\Damage.cs" />
     <Compile Include="Models\DamageType.cs" />
     <Compile Include="Models\Characters.cs" />
-    <Compile Include="Models\EncountersMonsters.cs" />
+    <Compile Include="Models\EncounterCreature.cs" />
     <Compile Include="Models\Equipment.cs" />
     <Compile Include="Models\LegendaryActions.cs" />
     <Compile Include="Models\Monsters.cs" />
@@ -214,10 +214,11 @@
     <Content Include="Views\Ability\Select.cshtml" />
     <Content Include="Views\Ability\Index.cshtml" />
     <Content Include="Views\Character\Index.cshtml" />
+    <Content Include="Views\Home\Add.cshtml" />
+    <Content Include="Views\Monsters\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="DAL\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
