@@ -139,6 +139,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\AbilityController.cs" />
     <Compile Include="Controllers\SpellsController.cs" />
+    <Compile Include="DAL\DungeonContext.cs" />
+    <Compile Include="DAL\DungeonInitializer.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -198,7 +200,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="DAL\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
