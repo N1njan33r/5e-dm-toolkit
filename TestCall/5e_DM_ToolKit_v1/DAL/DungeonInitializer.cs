@@ -10,7 +10,7 @@ namespace _5e_DM_ToolKit_v1.DAL
     {
         protected override void Seed(DungeonContext context)
         {
-            base.Seed(context);
+
         }
 
     }
