@@ -6,8 +6,9 @@ using System.Web;
 
 namespace _5e_DM_ToolKit_v1.Models
 {
-    public class EncountersMonsters
+    public class EncounterCreature
     {
+        public int Initiative { get; set; }
         [DisplayName("ID")]
         public string _ID { get; set; }
         public string Name { get; set; }
