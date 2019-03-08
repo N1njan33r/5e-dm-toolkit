@@ -1,0 +1,15 @@
+﻿@using _5e_DM_ToolKit_v1.Models
+
+@model SpecialAbilities
+
+@{
+    ViewBag.Title = "Select Ability";
+}
+
+<h2>Select</h2>
+
+@Html.DropDownList("Ability", 
+    new SelectList(Enum.GetValues(typeof(Ability))),
+    "Select Ability",
+    new { @class = "form-control"})
+
