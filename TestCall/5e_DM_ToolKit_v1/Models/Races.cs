@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -29,6 +31,24 @@ namespace _5e_DM_ToolKit_v1.Models
         [DisplayName("Language Description")]
         public string Language_Desc { get; set; }
         public Traits Traits { get; set; }
-        public Subraces Subraces { get; set; }
+        [Required]
+        public Subraces Subraces { get; set;}
+        [Required]
+        public Characters Character { get; set; }
+    }
+
+    public enum RaceEnum
+    {
+        Dwarf,
+        Elf,
+        Halfling,
+        Human,
+        Dragonborn,
+        Gnome,
+        [Display(Name = "Half Elf")]
+        Half_Elf,
+        [Display(Name = "Half Orc")]
+        Half_Orc,
+        Tiefling,
     }
 }
