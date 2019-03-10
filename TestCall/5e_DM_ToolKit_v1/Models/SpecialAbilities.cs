@@ -8,6 +8,7 @@ namespace _5e_DM_ToolKit_v1.Models
 {
     public class SpecialAbilities
     {
+        public int ID { get; set; }
         public string Attack_Bonus { get; set; }
         [DisplayName("Description")]
         public string Desc { get; set; }

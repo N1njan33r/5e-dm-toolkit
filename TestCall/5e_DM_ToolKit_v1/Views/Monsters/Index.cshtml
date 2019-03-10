@@ -1,17 +1,46 @@
-﻿<h1>@ViewBag.Title</h1>
+﻿@model PagedList.IPagedList<_5e_DM_ToolKit_v1.Models.Monsters>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
-<h2>Index</h2>
+@{
+    ViewBag.Title = "Monsters";
+}
 
-<div class="bluhbluhbluh">
-    <p>A1</p>
-    <p>A2</p>
-    <p>B1</p>
-    <p>B2</p>
-</div>
+<h2>Monsters</h2>
 
-<style type="text/css">
-    .bluhbluhbluh{
-        display: grid;
-        grid-template: 1fr 1fr / 1fr 1fr
+
+@using (Html.BeginForm("Index", "Monsters", FormMethod.Get))
+{
+    <p>
+        Find by name: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Search" />
+    </p>
+}
+<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
     }
-</style>
+
+</table>
+<br />
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))

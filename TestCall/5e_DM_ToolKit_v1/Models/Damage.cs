@@ -8,6 +8,7 @@ namespace _5e_DM_ToolKit_v1.Models
 {
     public class Damage
     {
+        public int ID { get; set; }
         [DisplayName("Dice Count")]
         public string Dice_Count { get; set; }
         [DisplayName("Dice Value")]

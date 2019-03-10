@@ -8,6 +8,7 @@ namespace _5e_DM_ToolKit_v1.Models
 {
     public class Actions
     {
+        public int ID { get; set; }
         [DisplayName("Damage Bonus")]
         public string Damage_Bonus { get; set; }
         [DisplayName("Damage Dice")]
