@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -22,5 +24,22 @@ namespace _5e_DM_ToolKit_v1.Models
         public string Starting_Proficiencies { get; set; }
         [DisplayName("Racial Traits")]
         public Traits Racial_Traits { get; set; }
+    }
+
+    public enum SubRacesEnum
+    {
+        [Display(Name = "Hill Dwarf")]
+        Hill_Dwarf,
+        [Display(Name = "High Elf")]
+        High_Elf,
+        [Display(Name = "Lightfoot Halfling")]
+        Lightfoot_Halfling,
+        [Display(Name = "Mountain Dwarf")]
+        Mountain_Dwarf,
+        [Display(Name = "Wood Elf")]
+        Wood_Elf,
+        [Display(Name = "Dark Elf (Drow)")]
+        Dark_Elf,
+
     }
 }

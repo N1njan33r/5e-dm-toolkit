@@ -1,4 +1,7 @@
-﻿@model _5e_DM_ToolKit_v1.Models.Characters
+﻿@using _5e_DM_ToolKit_v1.Models
+
+@model Characters
+
 
 @{
     ViewBag.Title = "Character Creation";
@@ -20,7 +23,9 @@
                     @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
                 </div>
+
             </div>
+
 
             <div class="form-inline">
 
@@ -29,6 +34,30 @@
                     <div class="col-md-10">
                         @Html.EditorFor(model => model.Strength, new { htmlAttributes = new { min = 0, max = 20 } })
                         @Html.ValidationMessageFor(model => model.Strength, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Race, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EnumDropDownListFor(model => model.RaceSelection,
+                       new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SubRaces, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EnumDropDownListFor(model => model.SubRaceSelection,
+                       new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Class, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EnumDropDownListFor(model => model.ClassSelection,
+                       new { @class = "form-control" })
                     </div>
                 </div>
 
@@ -74,7 +103,7 @@
             </div>
         </div>
         <div>
-           <p></p> 
+            <p></p>
         </div>
 
         <div class="form-group">
@@ -84,4 +113,6 @@
         </div>
     </div>
 }
-    @Html.ActionLink("Back to List", "Index")
+
+
+@Html.ActionLink("Back to List", "List")

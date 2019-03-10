@@ -139,6 +139,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\AbilityController.cs" />
     <Compile Include="Controllers\MonstersController.cs" />
+    <Compile Include="Controllers\MvcExtensionsLibrary.cs" />
     <Compile Include="Controllers\SpellsController.cs" />
     <Compile Include="DAL\DungeonContext.cs" />
     <Compile Include="DAL\DungeonInitializer.cs" />
@@ -310,6 +311,7 @@
     <Content Include="Views\Character\Index.cshtml" />
     <Content Include="Views\Monsters\Index.cshtml" />
     <Content Include="Views\Home\Add.cshtml" />
+    <Content Include="Views\Character\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

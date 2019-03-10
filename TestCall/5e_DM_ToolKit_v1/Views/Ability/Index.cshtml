@@ -8,8 +8,5 @@
 
 <h2>Select</h2>
 
-@Html.DropDownList("Ability", 
-    new SelectList(Enum.GetValues(typeof(Ability))),
-    "Select Ability",
-    new { @class = "form-control"})
+@Html.DropDownList("Ability", new SelectList(Enum.GetValues(typeof(Ability))), "Select Ability", new { @class = "form-control"})
 

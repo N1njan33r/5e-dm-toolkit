@@ -13,8 +13,9 @@ namespace _5e_DM_ToolKit_v1.DAL
         }
 
         public DbSet<Characters> Characters { get; set; }
-        //public DbSet<Classes> Classes { get; set; }
-        //public DbSet<Races> Races { get; set; }
+        public DbSet<Classes> Classes { get; set; }
+        public DbSet<Races> Races { get; set; }
+        public DbSet<Subraces> SubRaces { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
