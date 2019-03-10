@@ -23,6 +23,7 @@ namespace _5e_DM_ToolKit_v1.Controllers
             SpecialAbilities specialAbilities = new SpecialAbilities { Attack_Bonus = " ", Name = " ", Desc = " " };
             Actions actions = new Actions { Damage_Bonus = " ", Damage_Dice = " ", Attack_Bonus = " ", Desc = " ", Name = " ", URL = " " };
 
+            #region Commented out stuff. Consider deleting.
             //var monsterList = new List<Monsters>
             //{
 
@@ -680,6 +681,7 @@ namespace _5e_DM_ToolKit_v1.Controllers
 
             //db.Monsters.AddRange(monsterList);
             //db.SaveChanges();
+            #endregion
 
             if (searchString != null)
             {
