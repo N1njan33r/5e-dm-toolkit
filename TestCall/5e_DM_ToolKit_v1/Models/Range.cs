@@ -7,6 +7,7 @@ namespace _5e_DM_ToolKit_v1.Models
 {
     public class Range
     {
+        public int ID { get; set; }
         public string Normal { get; set; }
         public string Long { get; set; }
     }

@@ -7,6 +7,7 @@ namespace _5e_DM_ToolKit_v1.Models
 {
     public class School
     {
+        public int ID { get; set; }
         public string Name { get; set; }
         public string Url { get; set; }
     }
