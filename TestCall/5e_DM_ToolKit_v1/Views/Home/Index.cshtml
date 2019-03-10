@@ -1,5 +1,17 @@
-﻿@{
+﻿<!DOCTYPE html>
+@model string
+
+@{
     ViewBag.Title = "Home Page";
 }
 
-<div>Hello world!</div>
+<div>
+    <p>Value: @Model</p>
+</div>
+
+<style type="text/css">
+    div{
+        display: grid;
+        grid-template: 1fr 1fr / 1fr 1fr;
+    }
+</style>

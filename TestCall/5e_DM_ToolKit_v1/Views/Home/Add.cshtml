@@ -10,4 +10,5 @@
     @*@Html.LabelFor(model => model.VenueID, new { @class = "sr-only", @for = "txtVenueID" })
         @Html.TextBoxFor(model => model.VenueID, new { @class = "form-control", @placeholder = "ID:", @id = "txtVenueID" })
         @Html.ValidationMessageFor(model => model.VenueID)*@
+    <p>@ViewBag.Message</p>
 </div>
