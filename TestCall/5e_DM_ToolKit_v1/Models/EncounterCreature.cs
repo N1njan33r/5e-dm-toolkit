@@ -23,9 +23,5 @@ namespace _5e_DM_ToolKit_v1.Models
         public string Intelligence { get; set; }
         public string Wisdom { get; set; }
         public string Charisma { get; set; }
-
-
-
-
     }
 }

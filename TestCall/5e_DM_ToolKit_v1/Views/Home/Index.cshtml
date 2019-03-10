@@ -1,5 +1,12 @@
-﻿@{
+﻿<!DOCTYPE html>
+@model Queue<EncounterCreature>
+@using _5e_DM_ToolKit_v1.Models
+
+@{
     ViewBag.Title = "Home Page";
 }
 
-<div>Hello world!</div>
+@foreach (var creature in Model)
+{
+    <li>@creature.Initiative - @creature.Name</li>
+}
