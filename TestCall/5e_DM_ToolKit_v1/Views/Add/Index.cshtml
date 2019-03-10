@@ -1,33 +1,33 @@
-﻿@model _5e_DM_ToolKit_v1.Models.AddModel
+﻿@model EncounterCreature
+@using _5e_DM_ToolKit_v1.Models
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Add Creature";
 }
 
 <h2>Add</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm("SaveCreature", "Add")) 
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4></h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Init, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Initiative, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Init, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Init, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.Initiative, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Initiative, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -40,7 +40,7 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Index", "Home")
 </div>
 
 @section Scripts {
