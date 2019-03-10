@@ -8,6 +8,7 @@ namespace _5e_DM_ToolKit_v1.Models
 {
     public class Races
     {
+        public int ID { get; set; }
         [DisplayName("ID")]
         public string _ID { get; set; }
         public string Index { get; set; }
