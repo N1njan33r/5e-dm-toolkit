@@ -9,17 +9,12 @@ namespace _5e_DM_ToolKit_v1.Controllers
     {
         public ActionResult Index()
         {
-            //if (encounterCreatures.Count > 1)
-            //    encounterCreatures.Sort((x, y) => x.Initiative.CompareTo(y.Initiative));
-            List<EncounterCreature> test = TestList();
-            if (test.Count > 1)
-                test.Sort((x, y) => y.Initiative.CompareTo(x.Initiative));
             Queue<EncounterCreature> creaturesQueue = new Queue<EncounterCreature>();
-            //foreach (var x in encounterCreatures)
-            //{
-            //    creaturesQueue.Enqueue(x);
-            //}
-            foreach (var x in test)
+
+            // Note: Add feature to add a new creature mid-encounter without messing up current order.
+            if (encounterCreatures.Count > 1)
+                encounterCreatures.Sort((x, y) => y.Initiative.CompareTo(x.Initiative));
+            foreach (var x in encounterCreatures)
             {
                 creaturesQueue.Enqueue(x);
             }
@@ -27,25 +22,12 @@ namespace _5e_DM_ToolKit_v1.Controllers
             return View(creaturesQueue);
         }
 
-        public ActionResult Add()
+        public ActionResult NextTurn()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            //creaturesQueue.Enqueue(creaturesQueue.Dequeue());
+            return RedirectToAction("Index", "Home");
         }
 
-        public List<EncounterCreature> encounterCreatures = new List<EncounterCreature>();
-
-        public List<EncounterCreature> TestList()
-        {
-            encounterCreatures.Add(new EncounterCreature { Name = "Bulthok", Initiative = 4 });
-            encounterCreatures.Add(new EncounterCreature { Name = "Grog", Initiative = 13 });
-            encounterCreatures.Add(new EncounterCreature { Name = "Vaxx", Initiative = 24 });
-            encounterCreatures.Add(new EncounterCreature { Name = "Percy", Initiative = 8 });
-            encounterCreatures.Add(new EncounterCreature { Name = "Pike", Initiative = 11 });
-            encounterCreatures.Add(new EncounterCreature { Name = "Taryon", Initiative = 1 });
-
-            return encounterCreatures;
-        }
+        public static List<EncounterCreature> encounterCreatures = new List<EncounterCreature>();
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -8,12 +9,20 @@ namespace _5e_DM_ToolKit_v1.Models
 {
     public class EncounterCreature
     {
+        [DisplayName(" Initiative")]
+        [Range(1, 30)]
         public int Initiative { get; set; }
+
         [DisplayName("ID")]
         public string _ID { get; set; }
+
+        [Required(ErrorMessage = "Name")]
+        [MaxLength(20)]
         public string Name { get; set; }
+
         [DisplayName("Armor Class")]
         public string Armor_Class { get; set; }
+
         [DisplayName("Hit Points")]
         public string Hit_Points { get; set; }
         public string Speed { get; set; }

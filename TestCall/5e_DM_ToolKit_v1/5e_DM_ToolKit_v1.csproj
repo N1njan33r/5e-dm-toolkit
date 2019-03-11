@@ -146,6 +146,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\AbilityController.cs" />
     <Compile Include="Controllers\MonstersController.cs" />
+    <Compile Include="Controllers\MvcExtensionsLibrary.cs" />
     <Compile Include="Controllers\SpellsController.cs" />
     <Compile Include="DAL\DungeonContext.cs" />
     <Compile Include="DAL\DungeonInitializer.cs" />
@@ -192,8 +193,6 @@
     <Content Include="bin\Antlr3.Runtime.dll" />
     <Content Include="bin\EntityFramework.dll" />
     <Content Include="bin\EntityFramework.SqlServer.dll" />
-    <Content Include="bin\EntityFramework.SqlServer.xml" />
-    <Content Include="bin\EntityFramework.xml" />
     <Content Include="bin\Microsoft.AspNet.TelemetryCorrelation.dll" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
     <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
@@ -255,6 +254,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="obj\Release\5e_DM_ToolKit_v1.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Release\5e_DM_ToolKit_v1.csprojAssemblyReference.cache" />
     <Content Include="bin\5e_DM_ToolKit_v1.dll.config" />
     <Content Include="bin\roslyn\csc.exe.config" />
     <Content Include="bin\roslyn\csc.rsp" />
@@ -266,7 +267,6 @@
     <Content Include="bin\roslyn\vbc.exe.config" />
     <Content Include="bin\roslyn\vbc.rsp" />
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
-    <Content Include="obj\Release\5e_DM_ToolKit_v1.csproj.CoreCompileInputs.cache" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -298,6 +298,7 @@
     <Content Include="Views\Character\Index.cshtml" />
     <Content Include="Views\Monsters\Index.cshtml" />
     <Content Include="Views\Add\Index.cshtml" />
+    <Content Include="Views\Character\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
