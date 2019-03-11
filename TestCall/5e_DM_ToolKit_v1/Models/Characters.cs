@@ -25,6 +25,7 @@ namespace _5e_DM_ToolKit_v1.Models
         public int Wisdom { get; set; }
         public int Charisma { get; set; }
 
+        public string Url { get; set; }
     }
 
 }
