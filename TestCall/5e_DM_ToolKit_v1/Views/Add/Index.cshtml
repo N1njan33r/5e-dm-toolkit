@@ -39,10 +39,10 @@
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index", "Home") | 
-    @Html.ActionLink("Monster List", "Index", "Monsters")
-</div>
+    <div>
+        @Html.ActionLink("Add Monster", "Index", "Monsters", null, new { @class = "btn btn-default" })
+        @Html.ActionLink("Add Player Character", "List", "Character", null, new { @class = "btn btn-default" })
+    </div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
