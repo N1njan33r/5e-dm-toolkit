@@ -4,6 +4,8 @@
 
 @{
     ViewBag.Title = "Monsters";
+
+    var random = new Random();
 }
 
 <h2>Monsters</h2>
@@ -31,9 +33,8 @@
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                @Html.ActionLink("Add", "SendMonster", new { name = item.Name }) 
+                @*@Html.ActionLink("Details", "Details", new { id = item.ID })*@
             </td>
         </tr>
     }

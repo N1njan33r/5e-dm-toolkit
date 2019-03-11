@@ -15,10 +15,12 @@ namespace _5e_DM_ToolKit_v1.Controllers
             return View();
         }
 
-        [HttpPost]
-        public ActionResult SaveCreature(string Name, int Initiative)
+        //[HttpPost]
+        public ActionResult SaveCreature(string Name)
         {
-            HomeController.encounterCreatures.Add(new EncounterCreature { Name = Name, Initiative = Initiative });
+            var random = new Random();
+
+            HomeController.encounterCreatures.Add(new EncounterCreature { Name = Name, Initiative = random.Next(1,20) });
             return RedirectToAction("Index", "Home");
         }
     }
