@@ -22,5 +22,6 @@ namespace _5e_DM_ToolKit_v1.DAL
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
 
+        public System.Data.Entity.DbSet<_5e_DM_ToolKit_v1.Models.Races> Races { get; set; }
     }
 }

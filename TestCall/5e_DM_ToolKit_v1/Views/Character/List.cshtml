@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "List";
+
 }
 
 <h2>Character List</h2>
@@ -76,11 +77,11 @@
         <td>
             @Html.DisplayFor(modelItem => item.Charisma)
         </td>
-        @*<td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ID })  |
             @Html.ActionLink("Details", "Details", new { id = item.ID }) |
             @Html.ActionLink("Delete", "Delete", new { id = item.ID })
-        </td>*@
+        </td>
     </tr>
 }
 
