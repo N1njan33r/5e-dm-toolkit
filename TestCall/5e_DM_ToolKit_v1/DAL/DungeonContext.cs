@@ -1,8 +1,8 @@
-﻿using _5e_DM_ToolKit_v1.Models;
+﻿using TeamAlpha.GoldenOracle.Models;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 
-namespace _5e_DM_ToolKit_v1.DAL
+namespace TeamAlpha.GoldenOracle.DAL
 {
     public class DungeonContext : DbContext
     { 

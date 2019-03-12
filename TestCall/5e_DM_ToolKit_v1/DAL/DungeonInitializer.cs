@@ -1,11 +1,11 @@
-﻿using _5e_DM_ToolKit_v1.Models;
+﻿using TeamAlpha.GoldenOracle.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
-namespace _5e_DM_ToolKit_v1.DAL
+namespace TeamAlpha.GoldenOracle.DAL
 {
     public class DungeonInitializer : CreateDatabaseIfNotExists<DungeonContext>
     {
