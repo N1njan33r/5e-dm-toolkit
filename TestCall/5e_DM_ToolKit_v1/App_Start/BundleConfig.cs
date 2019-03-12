@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace _5e_DM_ToolKit_v1
+namespace TeamAlpha.GoldenOracle
 {
     public class BundleConfig
     {

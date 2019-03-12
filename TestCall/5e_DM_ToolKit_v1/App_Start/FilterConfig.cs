@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace _5e_DM_ToolKit_v1
+namespace TeamAlpha.GoldenOracle
 {
     public class FilterConfig
     {
