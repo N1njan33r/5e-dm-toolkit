@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -8,6 +9,7 @@ namespace _5e_DM_ToolKit_v1.Models
 {
     public class Monsters
     {
+        [Key]
         public int ID { get; set; }
         [DisplayName("ID")]
         public string _ID { get; set; }
@@ -63,8 +65,8 @@ namespace _5e_DM_ToolKit_v1.Models
         [DisplayName("Challenge Rating")]
         public string Challenge_Rating { get; set; }
         [DisplayName("Special Abilities")]
-        public SpecialAbilities Special_Abilities { get; set; }
-        public Actions Actions { get; set; }
+        public IEnumerable<SpecialAbilities> Special_Abilities { get; set; }
+        public IEnumerable<Actions> Actions { get; set; }
 
 
         public string URL { get; set; }

@@ -9,7 +9,10 @@ namespace _5e_DM_ToolKit_v1.Models
 {
     public class EncounterCreature
     {
-        [DisplayName(" Initiative")]
+        [Key]
+        public int ID { get; set; }
+
+        [DisplayName("Initiative")]
         [Range(1, 30)]
         public int Initiative { get; set; }
 

@@ -16,11 +16,11 @@ namespace _5e_DM_ToolKit_v1.Controllers
         }
 
         //[HttpPost]
-        public ActionResult SaveCreature(string Name)
+        public ActionResult SaveCreature(string Name, int Initiative)
         {
             var random = new Random();
 
-            HomeController.encounterCreatures.Add(new EncounterCreature { Name = Name, Initiative = random.Next(1,20) });
+            HomeController.encounterCreatures.Add(new EncounterCreature { Name = Name, Initiative = Initiative });
             return RedirectToAction("Index", "Home");
         }
     }

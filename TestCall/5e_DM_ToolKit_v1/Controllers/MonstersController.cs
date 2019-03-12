@@ -5,6 +5,8 @@ using PagedList;
 using System;
 using System.Linq;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using System.Net.Http;
 
 namespace _5e_DM_ToolKit_v1.Controllers
 {
@@ -54,11 +56,24 @@ namespace _5e_DM_ToolKit_v1.Controllers
         }
 
         
-        public ActionResult SendMonster(string name)
+        public ActionResult SendMonster(string name, int initiative)
         {
-            Monsters monster = new Monsters() { Name = name }; 
+            var monster = new EncounterCreature() { Name = name, Initiative = initiative };
 
             return RedirectToAction("SaveCreature", "Add", monster);
+        }
+
+        public async Task<ActionResult> Details(int? index)
+        {
+            //Monsters monster = null;
+            var client = new HttpClient();
+            var urlExtension = $"api/monsters/" + index;
+
+            client.BaseAddress = new Uri("http://dnd5eapi.co/");
+            var result = await client.GetAsync(urlExtension);
+            var monster = await result.Content.ReadAsAsync<Monsters>();
+
+            return View(monster);
         }
     }
 }

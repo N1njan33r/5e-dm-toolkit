@@ -152,15 +152,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201903101513303_InitialCreate.cs" />
-    <Compile Include="Migrations\201903101513303_InitialCreate.Designer.cs">
-      <DependentUpon>201903101513303_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201903110052199_Dungeon.cs" />
-    <Compile Include="Migrations\201903110052199_Dungeon.Designer.cs">
-      <DependentUpon>201903110052199_Dungeon.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AbilityScores.cs" />
     <Compile Include="Models\Actions.cs" />
     <Compile Include="Models\Classes.cs" />
@@ -273,6 +264,7 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\Monsters\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -287,14 +279,6 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201903101513303_InitialCreate.resx">
-      <DependentUpon>201903101513303_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201903110052199_Dungeon.resx">
-      <DependentUpon>201903110052199_Dungeon.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

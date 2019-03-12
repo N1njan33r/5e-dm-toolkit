@@ -33,8 +33,8 @@
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
-                @Html.ActionLink("Add", "SendMonster", new { name = item.Name }) 
-                @*@Html.ActionLink("Details", "Details", new { id = item.ID })*@
+                @Html.ActionLink("Add", "SendMonster", new { name = item.Name, initiative = random.Next(1,20) }) |
+                @Html.ActionLink("Details", "Details", new { index = item.Index })
             </td>
         </tr>
     }
