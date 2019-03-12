@@ -1,4 +1,4 @@
-namespace _5e_DM_ToolKit_v1.Migrations
+namespace TeamAlpha.GoldenOracle.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;

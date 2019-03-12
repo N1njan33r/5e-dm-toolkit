@@ -1,12 +1,12 @@
-﻿using _5e_DM_ToolKit_v1.DAL;
-using _5e_DM_ToolKit_v1.Models;
+﻿using TeamAlpha.GoldenOracle.DAL;
+using TeamAlpha.GoldenOracle.Models;
 using System.Web.Mvc;
 using PagedList;
 using System;
 using System.Linq;
 using System.Collections.Generic;
 
-namespace _5e_DM_ToolKit_v1.Controllers
+namespace TeamAlpha.GoldenOracle.Controllers
 {
     public class MonstersController : Controller
     {

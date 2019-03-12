@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5e_DM_ToolKit_v1", "5e_DM_ToolKit_v1\5e_DM_ToolKit_v1.csproj", "{7DB5EC4D-BF25-4F49-B683-BD44D87C8FE9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamAlpha.GoldenOracle", "5e_DM_ToolKit_v1\TeamAlpha.GoldenOracle.csproj", "{7DB5EC4D-BF25-4F49-B683-BD44D87C8FE9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
