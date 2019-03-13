@@ -179,9 +179,6 @@
     <Compile Include="Models\Subraces.cs" />
     <Compile Include="Models\ThrowRange.cs" />
     <Compile Include="Models\Traits.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\SpellsService.cs" />
   </ItemGroup>
@@ -270,12 +267,6 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="obj\Debug\5e_DM_ToolKit_v1.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\5e_DM_ToolKit_v1.dll" />
-    <Content Include="obj\Debug\5e_DM_ToolKit_v1.pdb" />
-    <Content Include="obj\Debug\TeamAlpha.GoldenOracle.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\TeamAlpha.GoldenOracle.dll" />
-    <Content Include="obj\Debug\TeamAlpha.GoldenOracle.pdb" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -308,18 +299,7 @@
     <Content Include="bin\roslyn\vbc.exe.config" />
     <Content Include="bin\roslyn\vbc.rsp" />
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
-    <Content Include="obj\Debug\5e_DM_ToolKit_v1.csproj.CopyComplete" />
-    <Content Include="obj\Debug\5e_DM_ToolKit_v1.csproj.CoreCompileInputs.cache" />
-    <Content Include="obj\Debug\5e_DM_ToolKit_v1.csprojAssemblyReference.cache" />
-    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <Content Include="obj\Release\5e_DM_ToolKit_v1.csproj.CoreCompileInputs.cache" />
-    <Content Include="obj\Release\5e_DM_ToolKit_v1.csprojAssemblyReference.cache" />
     <Content Include="bin\TeamAlpha.GoldenOracle.dll.config" />
-    <Content Include="obj\Debug\5e_DM_ToolKit_v1.csproj.GenerateResource.cache" />
-    <Content Include="obj\Debug\TeamAlpha.GoldenOracle.csproj.CopyComplete" />
-    <Content Include="obj\Debug\TeamAlpha.GoldenOracle.csproj.CoreCompileInputs.cache" />
-    <Content Include="obj\Debug\TeamAlpha.GoldenOracle.csproj.GenerateResource.cache" />
-    <Content Include="obj\Debug\Tsc.out" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -375,7 +355,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -387,12 +366,6 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="obj\Debug\TeamAlpha.GoldenOracle.Migrations.Dungeon.resources" />
-    <EmbeddedResource Include="obj\Debug\TeamAlpha.GoldenOracle.Migrations.InitialCreate.resources" />
-    <EmbeddedResource Include="obj\Debug\_5e_DM_ToolKit_v1.Migrations.Dungeon.resources" />
-    <EmbeddedResource Include="obj\Debug\_5e_DM_ToolKit_v1.Migrations.InitialCreate.resources" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
