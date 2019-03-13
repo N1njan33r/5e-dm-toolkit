@@ -16,8 +16,7 @@ namespace TeamAlpha.GoldenOracle
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
-                namespaces: new[] { "TeamAlpha.GoldenOracle.Controllers"}
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
