@@ -152,15 +152,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201903101513303_InitialCreate.cs" />
-    <Compile Include="Migrations\201903101513303_InitialCreate.Designer.cs">
-      <DependentUpon>201903101513303_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201903110052199_Dungeon.cs" />
-    <Compile Include="Migrations\201903110052199_Dungeon.Designer.cs">
-      <DependentUpon>201903110052199_Dungeon.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AbilityScores.cs" />
     <Compile Include="Models\Actions.cs" />
     <Compile Include="Models\Classes.cs" />
@@ -398,12 +389,6 @@
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201903101513303_InitialCreate.resx">
-      <DependentUpon>201903101513303_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201903110052199_Dungeon.resx">
-      <DependentUpon>201903110052199_Dungeon.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\TeamAlpha.GoldenOracle.Migrations.Dungeon.resources" />
     <EmbeddedResource Include="obj\Debug\TeamAlpha.GoldenOracle.Migrations.InitialCreate.resources" />
     <EmbeddedResource Include="obj\Debug\_5e_DM_ToolKit_v1.Migrations.Dungeon.resources" />

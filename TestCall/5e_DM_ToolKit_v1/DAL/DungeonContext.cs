@@ -41,7 +41,5 @@ namespace TeamAlpha.GoldenOracle.DAL
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
-
-        public DbSet<GoldenOracle.Models.Races> Races { get; set; }
     }
 }
