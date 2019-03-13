@@ -120,6 +120,12 @@ namespace TeamAlpha.GoldenOracle.Controllers
             return RedirectToAction("List");
         }
 
+        public ActionResult SendCharacter(string name)
+        {
+            Characters character = new Characters() { Name = name };
+
+            return RedirectToAction("SaveCreature", "Add", character);
+        }
 
         protected override void Dispose(bool disposing)
         {

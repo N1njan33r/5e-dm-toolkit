@@ -196,8 +196,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="5e_DM_ToolKit_v1.csproj.user" />
-    <Content Include="bin\5e_DM_ToolKit_v1.dll" />
-    <Content Include="bin\5e_DM_ToolKit_v1.pdb" />
     <Content Include="bin\Antlr3.Runtime.dll" />
     <Content Include="bin\EntityFramework.dll" />
     <Content Include="bin\EntityFramework.SqlServer.dll" />
@@ -309,7 +307,6 @@
     <Content Include="Scripts\esm\popper.js.map" />
     <Content Include="Scripts\esm\popper-utils.min.js.map" />
     <Content Include="Scripts\esm\popper-utils.js.map" />
-    <Content Include="bin\5e_DM_ToolKit_v1.dll.config" />
     <Content Include="bin\roslyn\csc.exe.config" />
     <Content Include="bin\roslyn\csc.rsp" />
     <Content Include="bin\roslyn\csi.exe.config" />
