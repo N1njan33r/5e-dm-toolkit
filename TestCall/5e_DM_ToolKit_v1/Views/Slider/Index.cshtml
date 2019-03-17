@@ -1,53 +1,53 @@
 ﻿@model Slider
-    @using TeamAlpha.GoldenOracle.Models
+@using TeamAlpha.GoldenOracle.Models
 
-    @{
-        ViewBag.Title = "Index";
+@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    output {
+        display: block;
     }
+</style>
+<!DOCTYPE html>
+<html>
 
-    <style>
-        .slidecontainer {
-            width: 100%;
-        }
+   
 
-        .slider {
-            -webkit-appearance: none;
-            width: 100%;
-            height: 25px;
-            background: #d3d3d3;
-            outline: none;
-            opacity: 0.7;
-            -webkit-transition: .2s;
-            transition: opacity .2s;
-        }
+<body>
+    <link href="https://rangeslider.js.org/assets/rangeslider.js/dist/rangeslider.css" rel="stylesheet" />
 
-            .slider:hover {
-                opacity: 1;
-            }
 
-            .slider::-webkit-slider-thumb {
-                -webkit-appearance: none;
-                width: 25px;
-                height: 25px;
-                background: #ff0000;
-                cursor: pointer; -->
-            }
-    </style>
+    <h1>Ability Scores Slider</h1>
+   
+    <div class=" slidecontainer">
 
-    <h1> Slider</h1>
+        <input type="range" name="range" class="slider" id="range"  step="1" min="1" max="30">
 
-    <div class="slidecontainer">
 
-        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
     </div>
+      
+    Strength     <output class="output1">10</output>
+    Dexterity    <output class="output2">15</output>
+    Constitution <output class="output3">14</output>
+    Intelligence <output class="output4">16</output>
+    Wisdom       <output class="output5">12</output>
+    Charisma     <output class="output6">8</output>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://rangeslider.js.org/assets/rangeslider.js/dist/rangeslider.min.js"></script>
+    <script>
+        $('input[type="range"]').rangeslider({ polyfill: false });
+        $('#range').on("input", function () {
+            $('.output1').val(parseFloat(this.value * 1.0).toFixed(0));
+            $('.output2').val(parseFloat(this.value * 1.5).toFixed(0));
+            $('.output3').val(parseFloat(this.value * 1.4).toFixed(0));
+            $('.output4').val(parseFloat(this.value * 1.6).toFixed(0));
+            $('.output5').val(parseFloat(this.value * 1.2).toFixed(0));
+            $('.output6').val(parseFloat(this.value * .8).toFixed(0));
 
-    <output class="Strength">10</output>
-    <output class="Dexterity">15</output>
-    <output class="Constitution">14</output>
-    <output class="Intelligence">16</output>
-    <output class="Wisdom">12</output>
-    <output class="Charisma">8</output>
-    <output class="HitPoints">99</output>
-
-
+        }).trigger("change");
+    </script>    
+</body>
+</html>
