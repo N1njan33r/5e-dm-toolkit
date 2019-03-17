@@ -26,20 +26,21 @@ namespace TeamAlpha.GoldenOracle.Models
         public Traits Racial_Traits { get; set; }
     }
 
-    public enum SubRacesEnum
+    public enum SubRaceEnum
     {
+        [Display(Name = "---N/A---")]
+        NA,
         [Display(Name = "Hill Dwarf")]
         Hill_Dwarf,
-        [Display(Name = "High Elf")]
-        High_Elf,
-        [Display(Name = "Lightfoot Halfling")]
-        Lightfoot_Halfling,
         [Display(Name = "Mountain Dwarf")]
         Mountain_Dwarf,
+        [Display(Name = "High Elf")]
+        High_Elf,
         [Display(Name = "Wood Elf")]
         Wood_Elf,
         [Display(Name = "Dark Elf (Drow)")]
         Dark_Elf,
-
+        [Display(Name = "Lightfoot Halfling")]
+        Lightfoot_Halfling
     }
 }

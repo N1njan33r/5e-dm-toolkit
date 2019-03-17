@@ -1,4 +1,4 @@
-﻿@model _5e_DM_ToolKit_v1.Models.Monsters
+﻿@model TeamAlpha.GoldenOracle.Models.Monsters
 
 @{
     ViewBag.Title = "Details";
@@ -35,13 +35,20 @@
             @Html.DisplayFor(model => model.Type)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Subtype)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Subtype)
-        </dd>
+
+        @if (!string.IsNullOrEmpty(Model.Subtype))
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.Subtype)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Subtype)
+            </dd>
+        }
+
+
 
         <dt>
             @Html.DisplayNameFor(model => model.Alignment)
@@ -326,30 +333,30 @@
         }
 
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Actions)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Actions)
+            </dt>
 
-        <dd>
-            @foreach (var item in Model.Actions)
-            {
             <dd>
-                Name:
-                @item.Name<br />
-                Description:
-                @item.Desc<br />
-                Attack Bonus:
-                @item.Attack_Bonus<br />
-                Damage Bonus:
-                @item.Damage_Bonus<br />
-                Damage Dice:
-                @item.Damage_Dice
-                <br />
-                ===========================================
-             </dd>
+                @foreach (var item in Model.Actions)
+                {
+                <dd>
+                    Name:
+                    @item.Name<br />
+                    Description:
+                    @item.Desc<br />
+                    Attack Bonus:
+                    @item.Attack_Bonus<br />
+                    Damage Bonus:
+                    @item.Damage_Bonus<br />
+                    Damage Dice:
+                    @item.Damage_Dice
+                    <br />
+                    ===========================================
+                </dd>
             }
-        
-        </dl>
+
+            </dl>
 </div>
 <p>
     @*@Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |*@

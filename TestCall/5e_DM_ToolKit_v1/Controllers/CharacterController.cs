@@ -24,13 +24,15 @@ namespace TeamAlpha.GoldenOracle.Controllers
         [HttpPost]
         public ActionResult Index(Characters characters)
         {
+            if (ModelState.IsValid)
+            {
+                db.Characters.Add(characters);
+                db.SaveChanges();
+                ModelState.Clear();
 
-            db.Characters.Add(characters);
-            db.SaveChanges();
-            ModelState.Clear();
+                ViewBag.Message = "Message Sent";
 
-            ViewBag.Message = "Message Sent";
-
+            }
 
             return View();
         }
@@ -120,9 +122,9 @@ namespace TeamAlpha.GoldenOracle.Controllers
             return RedirectToAction("List");
         }
 
-        public ActionResult SendCharacter(string name)
+        public ActionResult SendCharacter(string name, int initiative)
         {
-            Characters character = new Characters() { Name = name };
+            var character = new EncounterCreature() { Name = name, Initiative = initiative };
 
             return RedirectToAction("SaveCreature", "Add", character);
         }
