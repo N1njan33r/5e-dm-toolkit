@@ -1,12 +1,43 @@
-﻿body {
-    padding-top: 50px;
+﻿@import url('https://fonts.googleapis.com/css?family=Cinzel');
+
+.title {
+    font-family: 'Cinzel', serif;
+    font-size: 32pt;
+}
+
+body {
     padding-bottom: 20px;
+    background-image: url("parchment1.jpg");
+}
+
+a {
+    transition: 1s ease;
+    color: goldenrod;
+}
+
+a:hover {
+    color: yellow;
+    transition: 1s ease;
+}
+
+.navbar {
+    background-color: saddlebrown;
+    position: fixed;
+    width: 100%;
+}
+
+.title-menu {
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    margin-top: 100px;
+    position: fixed;
+    left: 0;
+    width: 30%;
+    border: 1px solid #000;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
