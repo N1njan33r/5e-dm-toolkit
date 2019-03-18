@@ -9,6 +9,11 @@ namespace TeamAlpha.GoldenOracle.Controllers
     {
         public ActionResult Index()
         {
+            //using (DungeonContext dungeon = new DungeonContext())
+            //{
+            //    List<Monsters> model = dungeon.Monsters.ToList();
+            //}
+
             List<EncounterCreature> encounter = encounterCreatures;
 
             // Note: Add feature to add a new creature mid-encounter without messing up current order.
@@ -23,9 +28,16 @@ namespace TeamAlpha.GoldenOracle.Controllers
             return View(creaturesQueue);
         }
 
+        public ActionResult GetView()
+        {
+            return PartialView();
+        }
+
         public ActionResult NextTurn()
         {
-            creaturesQueue.Enqueue(creaturesQueue.Dequeue());
+            if (creaturesQueue.Count > 0)
+                creaturesQueue.Enqueue(creaturesQueue.Dequeue());
+
             return View("Index", creaturesQueue);
         }
 

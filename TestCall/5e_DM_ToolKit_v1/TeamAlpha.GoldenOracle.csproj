@@ -278,6 +278,7 @@
     <Content Include="Views\Character\Details.cshtml" />
     <Content Include="Views\Slider\Index.cshtml" />
     <Content Include="Views\Monsters\Details.cshtml" />
+    <Content Include="Views\Home\MonstersDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

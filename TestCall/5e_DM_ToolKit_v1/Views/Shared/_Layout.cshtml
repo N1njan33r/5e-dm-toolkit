@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <style>
@@ -19,7 +19,7 @@
             <ul class="nav">
                 <li class="title-menu">@Html.ActionLink("Home", "Index", "Home")</li>
                 <li class="title-menu">@Html.ActionLink("Monsters", "Index", "Monsters")</li>
-                <li class="title-menu">@Html.ActionLink("Characters", "Index", "Character")</li>
+                <li class="title-menu">@Html.ActionLink("Characters", "List", "Character")</li>
             </ul>
         </div>
     </div>
