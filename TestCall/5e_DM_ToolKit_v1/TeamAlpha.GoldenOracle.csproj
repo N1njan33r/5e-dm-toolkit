@@ -190,7 +190,6 @@
     <Compile Include="Services\SpellsService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="5e_DM_ToolKit_v1.csproj.user" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
