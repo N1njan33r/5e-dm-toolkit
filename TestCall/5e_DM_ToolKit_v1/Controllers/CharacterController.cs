@@ -24,15 +24,10 @@ namespace TeamAlpha.GoldenOracle.Controllers
         [HttpPost]
         public ActionResult Index(Characters characters)
         {
-            if (ModelState.IsValid)
-            {
-                db.Characters.Add(characters);
-                db.SaveChanges();
-                ModelState.Clear();
 
-                ViewBag.Message = "Message Sent";
-
-            }
+            db.Characters.Add(characters);
+            db.SaveChanges();
+            ModelState.Clear();
 
             return View();
         }
