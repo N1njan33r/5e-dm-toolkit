@@ -1,16 +1,25 @@
 ﻿@model TeamAlpha.GoldenOracle.Models.Monsters
 
-@{
-    ViewBag.Title = "Details";
-    var random = new Random();
-}
-
-<h2>Details</h2>
-
 <div>
     <h4>Monsters</h4>
     <hr />
     <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model._ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model._ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Index)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Index)
+        </dd>
+
         <dt>
             @Html.DisplayNameFor(model => model.Name)
         </dt>
@@ -308,51 +317,16 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Special_Abilities)
+            @Html.DisplayNameFor(model => model.URL)
         </dt>
 
         <dd>
-            @foreach (var item in Model.Special_Abilities)
-            {
-            <dd>
-                Name:
-                @item.Name <br />
-                Description:
-                @item.Desc <br />
-                Attack Bonus:
-                @item.Attack_Bonus<br />
-                ===========================================
-            </dd>
-        }
+            @Html.DisplayFor(model => model.URL)
+        </dd>
 
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Actions)
-        </dt>
-
-        <dd>
-            @foreach (var item in Model.Actions)
-            {
-            <dd>
-                Name:
-                @item.Name<br />
-                Description:
-                @item.Desc<br />
-                Attack Bonus:
-                @item.Attack_Bonus<br />
-                Damage Bonus:
-                @item.Damage_Bonus<br />
-                Damage Dice:
-                @item.Damage_Dice
-                <br />
-                ===========================================
-             </dd>
-            }
-        
-        </dl>
+    </dl>
 </div>
 <p>
-    @*@Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |*@
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
     @Html.ActionLink("Back to List", "Index")
-    @Html.ActionLink("Add", "SendMonster", new { name = Model.Name, initiative = random.Next(1, 20) })
 </p>
