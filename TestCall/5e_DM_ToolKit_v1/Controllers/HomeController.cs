@@ -23,7 +23,7 @@ namespace TeamAlpha.GoldenOracle.Controllers
                 creaturesQueue.Enqueue(x);
             }
 
-            return View(creaturesQueue);
+            return View(encounterView);
         }
 
         [ChildActionOnly]
