@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
-@model Queue<EncounterCreature>
-@using TeamAlpha.GoldenOracle.Models
+@model EncounterViewModel
+@using TeamAlpha.GoldenOracle.Models.ViewModels
 
 @{
     ViewBag.Title = "GO Initiative Tracker";
@@ -16,10 +16,11 @@
             new SelectListItem() { Text = "Rib Knit", Value = "4" } }).SelectedIndex(3).Suggest(true).HtmlAttributes(new { style = "width:100%;" }))*@
         </div>
 
-        @foreach (var creature in Model)
+        @foreach (var creature in Model.EncounterCreatures)
         {
-            <li>@creature.Initiative - @creature.Name</li>
-            @*<a href="~/Views/Monsters/Details.cshtml">@creature.Initiative - @creature.Name</a>*@
+            @*<li>@creature.Initiative - @creature.Name</li>*@
+            @Html.ActionLink($"{creature.Initiative} - {@creature.Name}", "CreatureDetail", "Home", null, new { @class = "btn" })
+            <br/>
         }
 
         <div id="encounter-btns-div">
@@ -29,11 +30,8 @@
     </div>
 
     <div>
-        @*@Html.Partial("MonstersDetail")
-        <div class="container body-content">
-            @RenderBody()
-            <p>Hello world!</p>
-        </div>*@
+        <p>Welcome to the page!</p>
+        @Html.Action("MonstersDetail")
     </div>
 </body>
 
