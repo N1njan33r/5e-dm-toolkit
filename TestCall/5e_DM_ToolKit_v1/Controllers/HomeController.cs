@@ -1,5 +1,6 @@
 ﻿using TeamAlpha.GoldenOracle.DAL;
 using TeamAlpha.GoldenOracle.Models;
+using TeamAlpha.GoldenOracle.Models.ViewModels;
 using System.Collections.Generic;
 using System.Web.Mvc;
 
@@ -9,11 +10,8 @@ namespace TeamAlpha.GoldenOracle.Controllers
     {
         public ActionResult Index()
         {
-            //using (DungeonContext dungeon = new DungeonContext())
-            //{
-            //    List<Monsters> model = dungeon.Monsters.ToList();
-            //}
-
+            EncounterViewModel encounterView = new EncounterViewModel();
+            encounterView.EncounterCreatures = creaturesQueue;
             List<EncounterCreature> encounter = encounterCreatures;
 
             // Note: Add feature to add a new creature mid-encounter without messing up current order.
@@ -28,9 +26,10 @@ namespace TeamAlpha.GoldenOracle.Controllers
             return View(creaturesQueue);
         }
 
-        public ActionResult GetView()
+        [ChildActionOnly]
+        public ActionResult MonstersDetail(EncounterCreature creature)
         {
-            return PartialView();
+            return PartialView("MonstersDetail");
         }
 
         public ActionResult NextTurn()
