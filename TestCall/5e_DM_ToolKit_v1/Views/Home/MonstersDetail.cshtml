@@ -1,15 +1,15 @@
-﻿@*@model TeamAlpha.GoldenOracle.Models.Monsters
+﻿@model TeamAlpha.GoldenOracle.Models.ViewModels.EncounterViewModel
 
-<div>
-    <h4>Monsters</h4>
-    <hr />
+<div style="float:right" class="go-container">
+    @*<h4>Monsters</h4>
+    <hr />*@
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model._ID)
+        @*<dt>
+            @Html.DisplayNameFor(model => model.Monsters.Name)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model._ID)
+            @Html.DisplayFor(model => model.Monsters.Name)
         </dd>
 
         <dt>
@@ -18,17 +18,17 @@
 
         <dd>
             @Html.DisplayFor(model => model.Index)
-        </dd>
+        </dd>*@
 
         <dt>
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayNameFor(model => model.Monsters.Name)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Name)
+            @Html.DisplayFor(model => model.Monsters.Name)
         </dd>
 
-        <dt>
+        @*@<dt>
             @Html.DisplayNameFor(model => model.Size)
         </dt>
 
@@ -322,13 +322,13 @@
 
         <dd>
             @Html.DisplayFor(model => model.URL)
-        </dd>
+        </dd>*@
 
     </dl>
 </div>
-<p>
+@*<p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
     @Html.ActionLink("Back to List", "Index")
-</p>*@
+</p>
 
-<h1>Hello world!</h1>
+<h1>Hello world!</h1>*@

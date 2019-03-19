@@ -153,9 +153,18 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201903101513303_InitialCreate.cs" />
-    <Compile Include="Migrations\201903101513303_InitialCreate.Designer.cs" />
-    <Compile Include="Migrations\201903110052199_Dungeon.Designer.cs" />
+    <Compile Include="Migrations\201903191522184_Initial.cs" />
+    <Compile Include="Migrations\201903191522184_Initial.Designer.cs">
+      <DependentUpon>201903191522184_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903191532498_TestMonster.cs" />
+    <Compile Include="Migrations\201903191532498_TestMonster.Designer.cs">
+      <DependentUpon>201903191532498_TestMonster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903191539538_TestMonster2.cs" />
+    <Compile Include="Migrations\201903191539538_TestMonster2.Designer.cs">
+      <DependentUpon>201903191539538_TestMonster2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AbilityScores.cs" />
     <Compile Include="Models\Actions.cs" />
@@ -279,6 +288,7 @@
     <Content Include="Views\Monsters\Details.cshtml" />
     <Content Include="Views\Home\MonstersDetail.cshtml" />
     <Content Include="Views\Home\CharactersDetail.cshtml" />
+    <Content Include="Views\Shared\_MonstersDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -293,6 +303,17 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201903191522184_Initial.resx">
+      <DependentUpon>201903191522184_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903191532498_TestMonster.resx">
+      <DependentUpon>201903191532498_TestMonster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903191539538_TestMonster2.resx">
+      <DependentUpon>201903191539538_TestMonster2.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
