@@ -1,4 +1,7 @@
-﻿@model TeamAlpha.GoldenOracle.Models.Characters
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model TeamAlpha.GoldenOracle.Models.Characters
 
 @{
     ViewBag.Title = "Delete";
@@ -100,7 +103,8 @@
 
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">

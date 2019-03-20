@@ -58,7 +58,7 @@ namespace TeamAlpha.GoldenOracle.Controllers
         
         public ActionResult SendMonster(string name, int initiative)
         {
-            var monster = new EncounterCreature() { Name = name, Initiative = initiative };
+            var monster = new EncounterCreature() { Name = name, Initiative = initiative, isMonster = true };
 
             return RedirectToAction("SaveCreature", "Add", monster);
         }

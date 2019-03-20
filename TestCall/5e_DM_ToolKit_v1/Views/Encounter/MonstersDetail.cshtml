@@ -1,12 +1,10 @@
 ﻿@model EncounterViewModel
 @using TeamAlpha.GoldenOracle.Models.ViewModels
 
-
-
 <div>
-    @{ Html.RenderPartial("_EncounterLayout", Model.EncounterCreatures); }
+    @{ Html.RenderPartial("_EncounterLayout", Model); }
 </div>
-<div style="float:right" class="go-container">
+<div style="float:right; width: 200px;" class="go-container">
     @*<h4>Monsters</h4>
         <hr />*@
     <dl class="dl-horizontal">
@@ -27,11 +25,11 @@
             </dd>*@
 
         <dt>
-            @Html.DisplayNameFor(model => model.Monsters.Name)
+            @Html.DisplayNameFor(model => Model.Creature.Name)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Monsters.Name)
+            @Html.DisplayFor(model => Model.Creature.Name)
         </dd>
 
         @*@<dt>
@@ -335,6 +333,6 @@
 @*<p>
         @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
         @Html.ActionLink("Back to List", "Index")
-    </p>
+    </p>*@
 
-    <h1>Hello world!</h1>*@
+<h1>Hello world!</h1>

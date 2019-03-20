@@ -11,19 +11,19 @@
         <h3>Encounter:</h3>
     </div>
 
-    @if (Model.EncounterCreatures != null)
+    @if (Model != null && Model.EncounterCreatures != null)
     {
         foreach (var creature in Model.EncounterCreatures)
         {
             if (creature.isMonster == true)
             {
 
-                @Html.ActionLink($"{creature.Initiative} - {@creature.Name}", "MonstersDetail", "Home", new { id = creature._ID, value = creature.isMonster }, new { @class = "btn" })
+                @Html.ActionLink($"{creature.Initiative} - {@creature.Name}", "MonstersDetail", "Encounter", new { id = creature._ID, value = creature.isMonster }, new { @class = "btn" })
             }
             else
             {
 
-                @Html.ActionLink($"{creature.Initiative} - {@creature.Name}", "MonstersDetail", "Home", new { id = creature._ID, value = creature.isMonster }, new { @class = "btn" })
+                @Html.ActionLink($"{creature.Initiative} - {@creature.Name}", "MonstersDetail", "Encounter", new { id = creature._ID, value = creature.isMonster }, new { @class = "btn" })
             }
         }
         <br />
@@ -31,6 +31,6 @@
 
         <div id="encounter-btns-div">
             @Html.ActionLink("Add Creature", "Index", "Add", null, new { @class = "encounter-btn" })
-            @Html.ActionLink("Next Turn", "NextTurn", "Home", null, new { @class = "encounter-btn" })
+            @Html.ActionLink("Next Turn", "NextTurn", "Encounter", null, new { @class = "encounter-btn" })
         </div>
     </div>

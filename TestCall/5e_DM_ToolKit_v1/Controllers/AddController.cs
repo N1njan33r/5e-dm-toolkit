@@ -35,7 +35,7 @@ namespace TeamAlpha.GoldenOracle.Controllers
                 }
             }
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Encounter");
         }
     }
 }
