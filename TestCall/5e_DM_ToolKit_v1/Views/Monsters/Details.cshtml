@@ -1,4 +1,7 @@
-﻿@model TeamAlpha.GoldenOracle.Models.Monsters
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model TeamAlpha.GoldenOracle.Models.Monsters
 
 @{
     ViewBag.Title = "Details";
@@ -35,20 +38,13 @@
             @Html.DisplayFor(model => model.Type)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.Subtype)
+        </dt>
 
-
-        @if (!string.IsNullOrEmpty(Model.Subtype))
-        {
-            <dt>
-                @Html.DisplayNameFor(model => model.Subtype)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.Subtype)
-            </dd>
-        }
-
-
+        <dd>
+            @Html.DisplayFor(model => model.Subtype)
+        </dd>
 
         <dt>
             @Html.DisplayNameFor(model => model.Alignment)
@@ -357,9 +353,9 @@
             }
 
             </dl>
-</div>
-<p>
-    @*@Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |*@
-    @Html.ActionLink("Back to List", "Index")
-    @Html.ActionLink("Add", "SendMonster", new { name = Model.Name, initiative = random.Next(1, 20) })
-</p>
+        </div>
+        <p>
+            @*@Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |*@
+            @Html.ActionLink("Back to List", "Index")
+            @Html.ActionLink("Add", "SendMonster", new { name = Model.Name, initiative = random.Next(1, 20) })
+        </p>

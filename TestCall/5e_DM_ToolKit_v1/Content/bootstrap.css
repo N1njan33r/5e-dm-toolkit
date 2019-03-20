@@ -5323,6 +5323,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
+  align-items: center;
   padding-left: 0;
   margin-bottom: 0;
 }

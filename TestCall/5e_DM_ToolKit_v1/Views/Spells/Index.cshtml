@@ -1,83 +1,86 @@
-﻿@model TeamAlpha.GoldenOracle.Models.Spells
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model TeamAlpha.GoldenOracle.Models.Spells
 
-    @{
-        ViewBag.Title = "Index";
-    }
+@{
+    ViewBag.Title = "Index";
+}
 
-    <h2>Index</h2>
+<h2>Index</h2>
 
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Range)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Material)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Ritual)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Duration)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Concentration)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CastingTime)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Level)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.URL)
-            </th>
-            <th></th>
-        </tr>
-
-
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => Model.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => Model.Range)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => Model.Material)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => Model.Ritual)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => Model.Duration)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => Model.Concentration)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => Model.CastingTime)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => Model.Level)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => Model.URL)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-                @Html.ActionLink("Details", "Details", new { id = Model.ID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = Model.ID })
-            </td>
-        </tr>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Range)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Material)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ritual)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Duration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Concentration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CastingTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Level)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.URL)
+        </th>
+        <th></th>
+    </tr>
 
 
-    </table>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => Model.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.Range)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.Material)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.Ritual)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.Duration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.Concentration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.CastingTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.Level)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.URL)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+            @Html.ActionLink("Details", "Details", new { id = Model.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = Model.ID })
+        </td>
+    </tr>
+
+
+</table>
 
 
