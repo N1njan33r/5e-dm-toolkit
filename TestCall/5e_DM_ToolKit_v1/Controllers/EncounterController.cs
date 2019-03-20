@@ -19,16 +19,19 @@ namespace TeamAlpha.GoldenOracle.Controllers
         public ActionResult Index()
         {
             EncounterViewModel encounterView = new EncounterViewModel();
-            encounterView.EncounterCreatures = creaturesQueue;
-            List<EncounterCreature> encounter = encounterCreatures;
 
-            if (encounter.Count > 1)
-                encounter.Sort((x, y) => y.Initiative.CompareTo(x.Initiative));
-            creaturesQueue.Clear();
-            foreach (var x in encounter)
-            {
-                creaturesQueue.Enqueue(x);
-            }
+            SetEncounterCreatures(encounterView);
+
+            //encounterView.EncounterCreatures = creaturesQueue;
+            //List<EncounterCreature> encounter = encounterCreatures;
+
+            //if (encounter.Count > 1)
+            //    encounter.Sort((x, y) => y.Initiative.CompareTo(x.Initiative));
+            //creaturesQueue.Clear();
+            //foreach (var x in encounter)
+            //{
+            //    creaturesQueue.Enqueue(x);
+            //}
 
             return View(encounterView);
         }
@@ -38,9 +41,11 @@ namespace TeamAlpha.GoldenOracle.Controllers
             return PartialView("_EncounterView");
         }
 
-        public async Task<PartialViewResult> MonstersDetail(int? id, bool? value)
+        public async Task<PartialViewResult> MonstersDetail(int id, bool value)
         {
             var encounter = new EncounterViewModel();
+
+            SetEncounterCreatures(encounter);
 
             if (value == true)
             {
@@ -74,15 +79,38 @@ namespace TeamAlpha.GoldenOracle.Controllers
         //    return PartialView("MonstersDetail");
         //}
 
-        //public ActionResult NextTurn()
-        //{
-        //    if (creaturesQueue.Count > 0)
-        //        creaturesQueue.Enqueue(creaturesQueue.Dequeue());
+        public ActionResult NextTurn()
+        {
+            if (EncounterViewModel.creaturesQueue.Count > 0)
+            {
+                EncounterViewModel.creaturesQueue.Enqueue(EncounterViewModel.creaturesQueue.Dequeue());
+                return View("Index", EncounterViewModel.creaturesQueue);
+            }
+            else
+            {
+                return View("Index");
+            }
+        }
 
-        //    return View("Index", creaturesQueue);
-        //}
+        public void SetEncounterCreatures(EncounterViewModel encounterView)
+        {
+            encounterView.EncounterCreatures = EncounterViewModel.creaturesQueue;
+            List<EncounterCreature> encounter = EncounterViewModel.encounterCreatures;
 
-        public static Queue<EncounterCreature> creaturesQueue = new Queue<EncounterCreature>();
-        public static List<EncounterCreature> encounterCreatures = new List<EncounterCreature>();
+            if (encounter.Count > 1)
+                encounter.Sort((x, y) => y.Initiative.CompareTo(x.Initiative));
+            EncounterViewModel.creaturesQueue.Clear();
+            foreach (var x in encounter)
+            {
+                EncounterViewModel.creaturesQueue.Enqueue(x);
+            }
+        }
+
+        public ActionResult _EncounterLayout(EncounterViewModel encounterView)
+        {
+            SetEncounterCreatures(encounterView);
+            encounterView.EncounterCreatures = EncounterViewModel.creaturesQueue;
+            return PartialView(encounterView);
+        }
     }
 }

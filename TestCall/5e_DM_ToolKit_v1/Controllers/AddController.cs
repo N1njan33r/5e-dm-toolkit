@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using TeamAlpha.GoldenOracle.Models;
+using TeamAlpha.GoldenOracle.Models.ViewModels;
 
 namespace TeamAlpha.GoldenOracle.Controllers
 {
@@ -18,24 +19,24 @@ namespace TeamAlpha.GoldenOracle.Controllers
         //[HttpPost]
         public ActionResult SaveCreature(EncounterCreature encounterCreature)
         {
+            var encounterView = new EncounterViewModel();
+            EncounterViewModel.encounterCreatures.Add(encounterCreature);
 
-            EncounterController.encounterCreatures.Add(encounterCreature);
-
-            if (EncounterController.creaturesQueue.Count != 0)
+            if (EncounterViewModel.creaturesQueue.Count != 0)
             {
-                int i = EncounterController.creaturesQueue.Count;
-                while (EncounterController.creaturesQueue.Peek().Initiative > encounterCreature.Initiative && i > 0)
+                int i = EncounterViewModel.creaturesQueue.Count;
+                while (EncounterViewModel.creaturesQueue.Peek().Initiative > encounterCreature.Initiative && i > 0)
                 {
-                    EncounterController.creaturesQueue.Enqueue(EncounterController.creaturesQueue.Dequeue());
+                    EncounterViewModel.creaturesQueue.Enqueue(EncounterViewModel.creaturesQueue.Dequeue());
                     i--;
                 }
-                for (int j = EncounterController.encounterCreatures.Count - i; j > 0; j--)
+                for (int j = EncounterViewModel.encounterCreatures.Count - i; j > 0; j--)
                 {
-                    EncounterController.creaturesQueue.Enqueue(EncounterController.creaturesQueue.Dequeue());
+                    EncounterViewModel.creaturesQueue.Enqueue(EncounterViewModel.creaturesQueue.Dequeue());
                 }
             }
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("_EncounterLayout", "Encounter", encounterView);
         }
     }
 }

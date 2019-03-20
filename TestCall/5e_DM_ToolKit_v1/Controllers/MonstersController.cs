@@ -56,11 +56,9 @@ namespace TeamAlpha.GoldenOracle.Controllers
         }
 
         
-        public ActionResult SendMonster(string name, int initiative)
+        public ActionResult SendMonster(int id, string name, int initiative)
         {
-            var monster = new EncounterCreature() { Name = name, Initiative = initiative };
-
-            return RedirectToAction("SaveCreature", "Add", monster);
+            return RedirectToAction("SaveCreature", "Add", new EncounterCreature() { ID = id, Name = name, Initiative = initiative, isMonster = true });
         }
 
         public async Task<ActionResult> Details(int? index)
