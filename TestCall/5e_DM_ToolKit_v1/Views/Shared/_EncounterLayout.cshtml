@@ -18,12 +18,12 @@
             if (creature.isMonster == true)
             {
 
-                @Html.ActionLink($"{creature.Initiative} - {@creature.Name}", "MonstersDetail", "Encounter", new { id = creature._ID, value = creature.isMonster }, new { @class = "btn" })
+                @Html.ActionLink($"{creature.Initiative} - {@creature.Name}", "MonstersDetail", "Encounter", new { id = creature.ID, value = creature.isMonster }, new { @class = "btn" })
             }
             else
             {
 
-                @Html.ActionLink($"{creature.Initiative} - {@creature.Name}", "MonstersDetail", "Encounter", new { id = creature._ID, value = creature.isMonster }, new { @class = "btn" })
+                @Html.ActionLink($"{creature.Initiative} - {@creature.Name}", "MonstersDetail", "Encounter", new { id = creature.ID, value = creature.isMonster }, new { @class = "btn" })
             }
         }
         <br />
