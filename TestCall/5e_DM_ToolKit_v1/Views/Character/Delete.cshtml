@@ -22,7 +22,10 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.RaceSelection)
+            @{ string raceSelected = Model.RaceSelection.GetDisplayName();
+
+                @Html.DisplayFor(modelItem => raceSelected)
+            }
         </dd>
 
         <dt>
@@ -30,7 +33,10 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.SubRaceSelection)
+            @{ string subRaceSelected = Model.SubRaceSelection.GetDisplayName();
+
+                @Html.DisplayFor(modelItem => subRaceSelected)
+            }
         </dd>
 
         <dt>

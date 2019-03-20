@@ -49,25 +49,28 @@
         <div class="row">
             <div class="col">
                 @Html.LabelFor(model => model.Race, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10" >
-                        @Html.EnumDropDownListFor(model => model.RaceSelection,
-             new { @class = "form-control" })
+                <div class="col-md-10">
+                    @Html.EnumDropDownListFor(model => model.RaceSelection, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValueFor(raceSelected => raceSelected.RaceSelection)
                 </div>
             </div>
+
             <div class="col">
                 @Html.LabelFor(model => model.SubRaces, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
                     @Html.EnumDropDownListFor(model => model.SubRaceSelection,
-            new { @class = "form-control" })
+                                              new { @class = "form-control" })
                 </div>
             </div>
+
             <div class="col">
                 @Html.LabelFor(model => model.Class, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
                     @Html.EnumDropDownListFor(model => model.ClassSelection,
-         new { @class = "form-control" })
+                       new { @class = "form-control" })
                 </div>
             </div>
+
         </div>
 
         <p> </p>

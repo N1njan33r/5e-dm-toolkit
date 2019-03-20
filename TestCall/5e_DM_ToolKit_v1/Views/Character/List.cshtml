@@ -57,10 +57,16 @@
                     @Html.DisplayFor(modelItem => item.Strength)
                 </td>*@
             <td>
-                @Html.DisplayFor(modelItem => item.RaceSelection)
+                @{ string raceSelected = item.RaceSelection.GetDisplayName();
+
+                    @Html.DisplayFor(modelItem => raceSelected)
+                }
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.SubRaceSelection)
+               @{ string subRaceSelected = item.SubRaceSelection.GetDisplayName();
+
+                @Html.DisplayFor(modelItem => subRaceSelected)
+                }
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ClassSelection)
