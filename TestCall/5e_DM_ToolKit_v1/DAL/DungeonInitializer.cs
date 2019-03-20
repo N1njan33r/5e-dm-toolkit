@@ -669,6 +669,11 @@ namespace TeamAlpha.GoldenOracle.DAL
 
             };
 
+            foreach (Monsters monster in monsterList)
+            {
+                monster.IsMonster = true;
+            }
+
             context.Monsters.AddRange(monsterList);
             context.SaveChanges();
 
