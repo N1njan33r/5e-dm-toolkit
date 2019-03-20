@@ -1,4 +1,7 @@
-﻿@model Slider
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Slider
 @using TeamAlpha.GoldenOracle.Models
 
 @{
@@ -13,21 +16,21 @@
 <!DOCTYPE html>
 <html>
 
-   
+
 
 <body>
     <link href="https://rangeslider.js.org/assets/rangeslider.js/dist/rangeslider.css" rel="stylesheet" />
 
 
     <h1>Ability Scores Slider</h1>
-   
+
     <div class=" slidecontainer">
 
-        <input type="range" name="range" class="slider" id="range"  step="1" min="1" max="30">
+        <input type="range" name="range" class="slider" id="range" step="1" min="1" max="30">
 
 
     </div>
-      
+
     Strength     <output class="output1">10</output>
     Dexterity    <output class="output2">15</output>
     Constitution <output class="output3">14</output>
@@ -48,6 +51,6 @@
             $('.output6').val(parseFloat(this.value * .8).toFixed(0));
 
         }).trigger("change");
-    </script>    
+    </script>
 </body>
 </html>

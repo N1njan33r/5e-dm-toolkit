@@ -1,42 +1,24 @@
-﻿<!DOCTYPE html>
-@model EncounterViewModel
-@using TeamAlpha.GoldenOracle.Models.ViewModels
-
-@{
-    ViewBag.Title = "GO Initiative Tracker";
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<body>
-    <div id="encounter-list">
-        <div>
-            <h3>Encounter:</h3>
-            @*@(Html.Kendo().ComboBox().Name("fabric").Filter("contains").Placeholder("Select fabric...").DataTextField("Text").DataValueField("Value").BindTo(new List<SelectListItem>() {
-            new SelectListItem() { Text = "Cotton", Value = "1" },
-            new SelectListItem() { Text = "Polyester", Value = "2" },
-            new SelectListItem() { Text = "Cotton/Polyester", Value = "3" },
-            new SelectListItem() { Text = "Rib Knit", Value = "4" } }).SelectedIndex(3).Suggest(true).HtmlAttributes(new { style = "width:100%;" }))*@
+<!DOCTYPE html>
+
+    <body>
+        <div id="home-div-block">
+            <div>
+                <h1>Welcome to the Golden Oracle DM Toolkit!</h1>
+            </div>
+            <div id="home-button-block">
+                @Html.ActionLink("Encounter", "Index", "Encounter", null, new { @class = "encounter-btn" })
+                @Html.ActionLink("Create Character", "Index", "Character", null, new { @class = "encounter-btn" })
+                @Html.ActionLink("Monsters", "Index", "Monsters", null, new { @class = "encounter-btn" })
+                @Html.ActionLink("Characters", "List", "Character", null, new { @class = "encounter-btn" })
+            </div>
         </div>
+    </body>
 
-        @foreach (var creature in Model.EncounterCreatures)
-        {
-            @*<li>@creature.Initiative - @creature.Name</li>*@
-            @Html.ActionLink($"{creature.Initiative} - {@creature.Name}", "CreatureDetail", "Home", null, new { @class = "btn" })
-            <br/>
-        }
-
-        <div id="encounter-btns-div">
-            @Html.ActionLink("Add Creature", "Index", "Add", null, new { @class = "encounter-btn" })
-            @Html.ActionLink("Next Turn", "NextTurn", "Home", null, new { @class = "encounter-btn" })
-        </div>
-    </div>
-
-    <div>
-        <p>Welcome to the page!</p>
-        @Html.Action("MonstersDetail")
-    </div>
-</body>
-
-<script language="javascript">
-    //$(document).ready(function () {
-    //    $("#")
-    //})
-</script>
+    <script language="javascript">
+            //$(document).ready(function () {
+            //    $("#")
+            //})
+    </script>

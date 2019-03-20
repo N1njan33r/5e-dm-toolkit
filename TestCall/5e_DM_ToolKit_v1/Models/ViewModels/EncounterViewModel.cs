@@ -9,5 +9,10 @@ namespace TeamAlpha.GoldenOracle.Models.ViewModels
     {
         public Queue<EncounterCreature> EncounterCreatures { get; set; }
         public EncounterCreature Creature { get; set; }
+        public Monsters Monsters { get; set; }
+        public Characters Characters { get; set; }
+
+        public static Queue<EncounterCreature> creaturesQueue = new Queue<EncounterCreature>();
+        public static List<EncounterCreature> encounterCreatures = new List<EncounterCreature>();
     }
 }

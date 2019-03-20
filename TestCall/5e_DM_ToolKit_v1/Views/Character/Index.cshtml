@@ -1,4 +1,7 @@
-﻿@using TeamAlpha.GoldenOracle.Models
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using TeamAlpha.GoldenOracle.Models
 
 @model Characters
 
@@ -9,6 +12,7 @@
 
 <div class="go-container">
     <h2>Character Creation</h2>
+    <p/>
     @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()

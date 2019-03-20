@@ -142,6 +142,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AddController.cs" />
     <Compile Include="Controllers\CharacterController.cs" />
+    <Compile Include="Controllers\EncounterController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\AbilityController.cs" />
     <Compile Include="Controllers\MonstersController.cs" />
@@ -153,9 +154,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201903101513303_InitialCreate.cs" />
-    <Compile Include="Migrations\201903101513303_InitialCreate.Designer.cs" />
-    <Compile Include="Migrations\201903110052199_Dungeon.Designer.cs" />
+    <Compile Include="Migrations\201903200040287_Initial.cs" />
+    <Compile Include="Migrations\201903200040287_Initial.Designer.cs">
+      <DependentUpon>201903200040287_Initial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AbilityScores.cs" />
     <Compile Include="Models\Actions.cs" />
@@ -277,8 +279,10 @@
     <Content Include="Views\Character\Details.cshtml" />
     <Content Include="Views\Slider\Index.cshtml" />
     <Content Include="Views\Monsters\Details.cshtml" />
-    <Content Include="Views\Home\MonstersDetail.cshtml" />
-    <Content Include="Views\Home\CharactersDetail.cshtml" />
+    <Content Include="Views\Encounter\MonstersDetail.cshtml" />
+    <Content Include="Views\Encounter\CharactersDetail.cshtml" />
+    <Content Include="Views\Shared\_EncounterLayout.cshtml" />
+    <Content Include="Views\Encounter\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -293,6 +297,11 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201903200040287_Initial.resx">
+      <DependentUpon>201903200040287_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
