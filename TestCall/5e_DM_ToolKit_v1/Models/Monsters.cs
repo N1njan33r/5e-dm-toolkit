@@ -67,6 +67,7 @@ namespace TeamAlpha.GoldenOracle.Models
         [DisplayName("Special Abilities")]
         public IEnumerable<SpecialAbilities> Special_Abilities { get; set; }
         public IEnumerable<Actions> Actions { get; set; }
+        public bool IsMonster { get; set; }
 
 
         public string URL { get; set; }
