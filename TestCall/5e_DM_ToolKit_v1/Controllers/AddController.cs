@@ -19,19 +19,19 @@ namespace TeamAlpha.GoldenOracle.Controllers
         public ActionResult SaveCreature(EncounterCreature encounterCreature)
         {
 
-            HomeController.encounterCreatures.Add(encounterCreature);
+            EncounterController.encounterCreatures.Add(encounterCreature);
 
-            if (HomeController.creaturesQueue.Count != 0)
+            if (EncounterController.creaturesQueue.Count != 0)
             {
-                int i = HomeController.creaturesQueue.Count;
-                while (HomeController.creaturesQueue.Peek().Initiative > encounterCreature.Initiative && i > 0)
+                int i = EncounterController.creaturesQueue.Count;
+                while (EncounterController.creaturesQueue.Peek().Initiative > encounterCreature.Initiative && i > 0)
                 {
-                    HomeController.creaturesQueue.Enqueue(HomeController.creaturesQueue.Dequeue());
+                    EncounterController.creaturesQueue.Enqueue(EncounterController.creaturesQueue.Dequeue());
                     i--;
                 }
-                for (int j = HomeController.encounterCreatures.Count - i; j > 0; j--)
+                for (int j = EncounterController.encounterCreatures.Count - i; j > 0; j--)
                 {
-                    HomeController.creaturesQueue.Enqueue(HomeController.creaturesQueue.Dequeue());
+                    EncounterController.creaturesQueue.Enqueue(EncounterController.creaturesQueue.Dequeue());
                 }
             }
 

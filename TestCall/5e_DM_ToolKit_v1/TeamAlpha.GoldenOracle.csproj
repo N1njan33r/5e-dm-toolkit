@@ -142,6 +142,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AddController.cs" />
     <Compile Include="Controllers\CharacterController.cs" />
+    <Compile Include="Controllers\EncounterController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\AbilityController.cs" />
     <Compile Include="Controllers\MonstersController.cs" />
@@ -153,17 +154,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201903191522184_Initial.cs" />
-    <Compile Include="Migrations\201903191522184_Initial.Designer.cs">
-      <DependentUpon>201903191522184_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201903191532498_TestMonster.cs" />
-    <Compile Include="Migrations\201903191532498_TestMonster.Designer.cs">
-      <DependentUpon>201903191532498_TestMonster.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201903191539538_TestMonster2.cs" />
-    <Compile Include="Migrations\201903191539538_TestMonster2.Designer.cs">
-      <DependentUpon>201903191539538_TestMonster2.cs</DependentUpon>
+    <Compile Include="Migrations\201903200040287_Initial.cs" />
+    <Compile Include="Migrations\201903200040287_Initial.Designer.cs">
+      <DependentUpon>201903200040287_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AbilityScores.cs" />
@@ -286,9 +279,10 @@
     <Content Include="Views\Character\Details.cshtml" />
     <Content Include="Views\Slider\Index.cshtml" />
     <Content Include="Views\Monsters\Details.cshtml" />
-    <Content Include="Views\Home\MonstersDetail.cshtml" />
-    <Content Include="Views\Home\CharactersDetail.cshtml" />
-    <Content Include="Views\Shared\_MonstersDetail.cshtml" />
+    <Content Include="Views\Encounter\MonstersDetail.cshtml" />
+    <Content Include="Views\Encounter\CharactersDetail.cshtml" />
+    <Content Include="Views\Shared\_EncounterLayout.cshtml" />
+    <Content Include="Views\Encounter\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -305,14 +299,8 @@
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201903191522184_Initial.resx">
-      <DependentUpon>201903191522184_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201903191532498_TestMonster.resx">
-      <DependentUpon>201903191532498_TestMonster.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201903191539538_TestMonster2.resx">
-      <DependentUpon>201903191539538_TestMonster2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201903200040287_Initial.resx">
+      <DependentUpon>201903200040287_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
