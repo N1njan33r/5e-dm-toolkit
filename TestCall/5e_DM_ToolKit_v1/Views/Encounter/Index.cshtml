@@ -1,0 +1,14 @@
+﻿@model EncounterViewModel
+@using TeamAlpha.GoldenOracle.Models.ViewModels
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div>
+    @{ Html.RenderPartial("_EncounterLayout", Model); }
+</div>
+<div class="list-group">
+    <h2>Index</h2>
+    @Html.ActionLink("Start Encounter", "Index", "Add", null, new { @class = "btn" })
+</div>

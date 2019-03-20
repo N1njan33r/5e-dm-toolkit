@@ -12,6 +12,8 @@ namespace TeamAlpha.GoldenOracle.Models
         [Key]
         public int ID { get; set; }
 
+        public bool isMonster { get; set; }
+
         [DisplayName("Initiative")]
         [Range(1, 30)]
         public int Initiative { get; set; }

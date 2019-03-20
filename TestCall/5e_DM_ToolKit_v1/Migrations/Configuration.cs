@@ -10,7 +10,6 @@ namespace TeamAlpha.GoldenOracle.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "TeamAlpha.GoldenOracle.DAL.DungeonContext";
         }
 
         protected override void Seed(TeamAlpha.GoldenOracle.DAL.DungeonContext context)
