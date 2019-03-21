@@ -12,10 +12,11 @@ namespace TeamAlpha.GoldenOracle.Models
     {
         public int ID { get; set; }
         public string Name { get; set; }
+        public int Initiative { get; set; }
         public Races Race { get; set; }
         public RaceEnum RaceSelection { get; set; }
         public Subraces SubRaces { get; set; }
-        public SubRacesEnum SubRaceSelection { get; set; }
+        public SubRaceEnum SubRaceSelection { get; set; }
         public Classes Class { get; set; }
         public ClassesEnum ClassSelection { get; set; }
         public int Strength { get; set; }

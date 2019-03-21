@@ -29,9 +29,6 @@ namespace TeamAlpha.GoldenOracle.Controllers
             db.SaveChanges();
             ModelState.Clear();
 
-            ViewBag.Message = "Message Sent";
-
-
             return View();
         }
 
@@ -120,9 +117,9 @@ namespace TeamAlpha.GoldenOracle.Controllers
             return RedirectToAction("List");
         }
 
-        public ActionResult SendCharacter(string name)
+        public ActionResult SendCharacter(string name, int initiative)
         {
-            Characters character = new Characters() { Name = name };
+            var character = new EncounterCreature() { Name = name, Initiative = initiative };
 
             return RedirectToAction("SaveCreature", "Add", character);
         }

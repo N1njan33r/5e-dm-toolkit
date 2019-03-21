@@ -7,20 +7,13 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
-<h3>Are you sure you want to delete this?</h3>
+
 <div>
-    <h4>Characters</h4>
     <hr />
+
+    <h2>Delete this Character?</h2>
+
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Race._ID)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Race._ID)
-        </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.Name)
         </dt>
@@ -30,23 +23,29 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.RaceSelection)
+            @Html.DisplayNameFor(model => model.Race)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.RaceSelection)
+            @{ string raceSelected = Model.RaceSelection.GetDisplayName();
+
+                @Html.DisplayFor(modelItem => raceSelected)
+            }
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.SubRaceSelection)
+            @Html.DisplayNameFor(model => model.SubRaces)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.SubRaceSelection)
+            @{ string subRaceSelected = Model.SubRaceSelection.GetDisplayName();
+
+                @Html.DisplayFor(modelItem => subRaceSelected)
+            }
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.ClassSelection)
+            @Html.DisplayNameFor(model => model.Class)
         </dt>
 
         <dd>
@@ -108,7 +107,7 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <input type="submit" value="Delete" class="btn-danger" />
             @Html.ActionLink("Back to List", "List")
         </div>
     }
