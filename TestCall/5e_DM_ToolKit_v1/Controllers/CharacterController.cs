@@ -68,7 +68,7 @@ namespace TeamAlpha.GoldenOracle.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Name,Strength,RaceSelection,SubRaceSelection,ClassSelection,Dexterity, Constitution, Intelligence, Wisdom, Charisma")] Characters character)
+        public ActionResult Edit([Bind(Include = "ID,Name,Strength,Initiative,RaceSelection,SubRaceSelection,ClassSelection,Dexterity, Constitution, Intelligence, Wisdom, Charisma")] Characters character)
         {
             if (ModelState.IsValid)
             {
@@ -117,7 +117,7 @@ namespace TeamAlpha.GoldenOracle.Controllers
             return RedirectToAction("List");
         }
 
-        public ActionResult SendCharacter(string name, int initiative)
+        public ActionResult SendCharacter( string name, int initiative)
         {
             var character = new EncounterCreature() { Name = name, Initiative = initiative };
 
