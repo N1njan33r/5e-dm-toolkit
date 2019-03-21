@@ -6,31 +6,30 @@
 @model EncounterViewModel
 @using TeamAlpha.GoldenOracle.Models.ViewModels
 
-<div id="encounter-list">
+<div id="encounter-block">
     <div>
         <h3>Encounter:</h3>
     </div>
 
-    @if (Model != null && Model.EncounterCreatures != null)
-    {
-        foreach (var creature in Model.EncounterCreatures)
+    <div id="encounter-list">
+        @if (Model != null && Model.EncounterCreatures != null)
         {
-            if (creature.isMonster == true)
+            foreach (var creature in Model.EncounterCreatures)
             {
-
-                @Html.ActionLink($"{creature.Initiative} - {@creature.Name}", "MonstersDetail", "Encounter", new { id = creature.ID, value = creature.isMonster }, new { @class = "btn" })
-            }
-            else
-            {
-
-                @Html.ActionLink($"{creature.Initiative} - {@creature.Name}", "MonstersDetail", "Encounter", new { id = creature.ID, value = creature.isMonster }, new { @class = "btn" })
+                if (creature.isMonster == true)
+                {
+                    @Html.ActionLink($"{creature.Initiative} - {@creature.Name}", "MonstersDetail", "Encounter", new { id = creature.ID, value = creature.isMonster }, new { @class = "btn" })
+                }
+                else
+                {
+                    @Html.ActionLink($"{creature.Initiative} - {@creature.Name}", "MonstersDetail", "Encounter", new { id = creature.ID, value = creature.isMonster }, new { @class = "btn" })
+                }
             }
         }
-        <br />
-    }
-
-        <div id="encounter-btns-div">
-            @Html.ActionLink("Add Creature", "Index", "Add", null, new { @class = "encounter-btn" })
-            @Html.ActionLink("Next Turn", "NextTurn", "Encounter", null, new { @class = "encounter-btn" })
-        </div>
     </div>
+
+    <div id="encounter-btns-div">
+        @Html.ActionLink("Add Creature", "Index", "Add", null, new { @class = "encounter-btn" })
+        @Html.ActionLink("Next Turn", "NextTurn", "Encounter", null, new { @class = "encounter-btn" })
+    </div>
+</div>

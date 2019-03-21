@@ -24,7 +24,6 @@ namespace TeamAlpha.GoldenOracle.Controllers
         [HttpPost]
         public ActionResult Index(Characters characters)
         {
-
             db.Characters.Add(characters);
             db.SaveChanges();
             ModelState.Clear();
@@ -34,7 +33,6 @@ namespace TeamAlpha.GoldenOracle.Controllers
 
         public ActionResult List()
         {
-
             return View(db.Characters.ToList());
         }
 
