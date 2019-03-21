@@ -1,107 +1,113 @@
-﻿@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+﻿
 @model TeamAlpha.GoldenOracle.Models.Characters
 @{
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+@*<h2>Details</h2>*@
 
 <div>
-    <h4>Characters</h4>
-    <hr />
-    <dl class="dl-horizontal">
+    <form>
+        <h2>Details</h2>
+        <hr />
+        <dl class="dl-horizontal">
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Race)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Race)
+            </dt>
 
-        <dd>
-            @{ string raceSelected = Model.RaceSelection.GetDisplayName();
+            <dd>
+                @{ string raceSelected = Model.RaceSelection.GetDisplayName();
 
-                @Html.DisplayFor(modelItem => raceSelected)
-            }
-        </dd>
+                    @Html.DisplayFor(modelItem => raceSelected)
+                }
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.SubRaces)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.SubRaces)
+            </dt>
 
-        <dd>
-            @{ string subRaceSelected = Model.SubRaceSelection.GetDisplayName();
+            <dd>
+                @{ string subRaceSelected = Model.SubRaceSelection.GetDisplayName();
 
-                @Html.DisplayFor(modelItem => subRaceSelected)
-            }
-        </dd>
+                    @Html.DisplayFor(modelItem => subRaceSelected)
+                }
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Class)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Class)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ClassSelection)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.ClassSelection)
+            </dd>
+            
+            <dt>
+                @Html.DisplayNameFor(model => model.Strength)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Strength)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Strength)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Strength)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Dexterity)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Dexterity)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Dexterity)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Dexterity)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Constitution)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Constitution)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Constitution)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Constitution)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Intelligence)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Intelligence)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Intelligence)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Intelligence)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Wisdom)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Wisdom)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Wisdom)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Wisdom)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Charisma)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Charisma)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Charisma)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Charisma)
-        </dd>
+        </dl>
 
-    </dl>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+            @Html.ActionLink("Back to List", "List")
+        </p>
+    </form>
+
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "List")
-</p>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}

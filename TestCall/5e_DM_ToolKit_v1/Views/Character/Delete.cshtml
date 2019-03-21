@@ -7,10 +7,12 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete this Character?</h2>
 
 <div>
     <hr />
+
+    <h2>Delete this Character?</h2>
+
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.Name)
@@ -105,7 +107,7 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn-danger" /> 
+            <input type="submit" value="Delete" class="btn-danger" />
             @Html.ActionLink("Back to List", "List")
         </div>
     }
