@@ -2,13 +2,20 @@
 @using TeamAlpha.GoldenOracle.Models.ViewModels
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "5e Combat Tracker";
 }
 
 <div>
     @{ Html.RenderPartial("_EncounterLayout", Model); }
 </div>
-<div class="list-group">
-    <h2>Index</h2>
-    @Html.ActionLink("Start Encounter", "Index", "Add", null, new { @class = "btn" })
+<div class="list-group" style="margin-left: 410px; margin-top: 12px">
+    <h2>@ViewBag.Title</h2>
+    @if (Model.EncounterCreatures.Count == 0)
+    {
+        @Html.ActionLink("Add Creatures", "Index", "Add", null, new { @class = "btn" })
+    }
+    else
+    {
+        <h3>Click on a creature to the left to view stats.</h3>
+    }
 </div>

@@ -81,10 +81,14 @@ namespace TeamAlpha.GoldenOracle.Controllers
 
         public ActionResult NextTurn()
         {
-            if (EncounterViewModel.creaturesQueue.Count > 0)
+            EncounterViewModel encounter = new EncounterViewModel
             {
-                EncounterViewModel.creaturesQueue.Enqueue(EncounterViewModel.creaturesQueue.Dequeue());
-                return View("Index", EncounterViewModel.creaturesQueue);
+                EncounterCreatures = EncounterViewModel.creaturesQueue
+            };
+            if (encounter.EncounterCreatures.Count > 0)
+            {
+                encounter.EncounterCreatures.Enqueue(encounter.EncounterCreatures.Dequeue());
+                return PartialView("_EncounterLayout", encounter);
             }
             else
             {
