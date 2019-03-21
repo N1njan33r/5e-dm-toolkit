@@ -12,7 +12,7 @@ namespace TeamAlpha.GoldenOracle.Models
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public int Initiative { get; set; }
+        //public int Initiative { get; set; }
         public Races Race { get; set; }
         public RaceEnum RaceSelection { get; set; }
         public Subraces SubRaces { get; set; }
