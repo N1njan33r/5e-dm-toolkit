@@ -35,7 +35,7 @@
 
         <div><span class="bold">Senses</span><span> @Html.DisplayFor(Model => Model.Monsters.Senses)</span></div>
         <div><span class="bold">Languages</span><span> @Html.DisplayFor(Model => Model.Monsters.Languages)</span></div>
-        <div><span class="bold">Challenge</span><span> @Html.DisplayFor(Model => Model.Monsters.Challenge_Rating) (450 XP)</span></div>
+        <div><span class="bold">Challenge</span><span> @Html.DisplayFor(Model => Model.Monsters.Challenge_Rating)</span></div>
 
         <div class="gradient"></div>
 
@@ -44,25 +44,12 @@
         <div class="hr"></div>
 
         <div class="attack">
-            <span class="attackname">Attack1.</span>
+            @foreach (var item in Model.Monsters.Actions)
+            {
+                <span class="attackname">@item.Name</span>
+                <span class="description">@item.Desc</span>
+                <br />
+            }
         </div>
-        <div class="attack">
-            <span class="attackname">Attack2.</span>
-        </div>
-
-        @*<div class="attack">
-            <span class="attackname">Greatclub.</span>
-            <span class="description"> Melee Weapon Attack:</span>
-            <span>+6 to hit, reach 5 ft., one target.</span>
-            <span class="description">Hit:</span>
-            <span>13 (2d8+4) bludgeoning damage.</span>
-        </div>
-        <div class="attack">
-            <span class="attackname">Javelin.</span>
-            <span class="description"> Melee or Ranged Weapon Attack:</span>
-            <span>+6 to hit, reach 5 ft. or 30ft./120, one target.</span>
-            <span class="description">Hit:</span>
-            <span>11 (2d6+4) piercing damage.</span>
-        </div>*@
     </div>
 </div>

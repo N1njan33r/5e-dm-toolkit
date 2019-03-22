@@ -49,7 +49,6 @@ namespace TeamAlpha.GoldenOracle.Controllers
 
             if (value == true)
             {
-
                 var client = new HttpClient();
                 var urlExtension = $"api/monsters/" + id;
 
@@ -59,18 +58,16 @@ namespace TeamAlpha.GoldenOracle.Controllers
 
                 encounter.Monsters = monster;
 
-                //return PartialView("_MonstersDetail", encounter);
+                return PartialView("MonstersDetail", encounter);
             }
 
-            else if (value == false)
+            else
             {
                 Characters character = db.Characters.Find(id);
                 encounter.Characters = character;
 
-                //return PartialView("_MonstersDetail", encounter);
+                return PartialView("CharactersDetail", encounter);
             }
-
-            return PartialView("MonstersDetail", encounter);
         }
 
         //[ChildActionOnly]

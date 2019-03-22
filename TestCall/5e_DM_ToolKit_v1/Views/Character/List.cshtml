@@ -5,6 +5,7 @@
 
 @{
     ViewBag.Title = "List";
+    var random = new Random();
 }
 
 <div class="go-container">
@@ -88,7 +89,7 @@
                         @Html.ActionLink("Edit", "Edit", new { id = item.ID })  |
                         @Html.ActionLink("Details", "Details", new { id = item.ID }) |
                         @Html.ActionLink("Delete", "Delete", new { id = item.ID }) |
-                        @Html.ActionLink("Add", "SendCharacter", new { name = item.Name })
+                        @Html.ActionLink("Add", "SendCharacter", new { name = item.Name, initiative = random.Next(1, 20) })
                     </td>
                 </tr>
             }
