@@ -18,3 +18,5 @@ namespace TeamAlpha.GoldenOracle.Controllers
         }
     }
 }
+
+// Special thanks to my group members Zachary Hordynski, Sebastian Wurst, and Terri Thorpe for making this project come together.
